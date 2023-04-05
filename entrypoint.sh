@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -e
-echo "SOURCE=$SOURCE_SSH_PRIVATE_KEY"
+
 if [[ -n "$SSH_PRIVATE_KEY" ]]; then
   mkdir -p /root/.ssh
   echo "$SSH_PRIVATE_KEY" | sed 's/\\n/\n/g' >/root/.ssh/id_rsa
