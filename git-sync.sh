@@ -31,7 +31,7 @@ echo "KEY=$SOURCE_SSH_PRIVATE_KEY"
 if [[ -n "$SOURCE_SSH_PRIVATE_KEY" ]]; then
   # Clone using source ssh key if provided
   echo $SSH_PASSPHRASE > ~/.ssh_askpass && chmod +x ~/.ssh_askpass
-  echo "$SOURCE_SSH_PRIVATE_KEY" | tr -d '\r' | DISPLAY=None SSH_ASKPASS=~/.ssh_askpass core.sshCommand="/usr/bin/ssh-add" - >/dev/null
+  echo "$SOURCE_SSH_PRIVATE_KEY" | tr -d '\r' | DISPLAY=None SSH_ASKPASS=~/.ssh_askpass ssh-add - >/dev/null
   git clone -c core.sshCommand="/usr/bin/ssh -i ~/.ssh/src_rsa" "$SOURCE_REPO" /root/source --origin source && cd /root/source
 else
   git clone "$SOURCE_REPO" /root/source --origin source && cd /root/source
