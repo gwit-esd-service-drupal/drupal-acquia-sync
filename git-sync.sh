@@ -57,6 +57,6 @@ fi
 git push destination --all 
 git push destination -f --tags 
 
-git push development "${SOURCE_BRANCH}:${DEVELOPMENT_REPO}" -f
+git push development "${DESTINATION_BRANCH}:${DEVELOPMENT_REPO}" -f
 git push development -f --tags
 
