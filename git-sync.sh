@@ -41,6 +41,7 @@ else
 fi
 
 git remote add destination "$DESTINATION_REPO"
+git remote add development "$DEVELOPMENT_REPO"
 
 # Pull all branches references down locally so subsequent commands can see them
 git fetch source '+refs/heads/*:refs/heads/*' --update-head-ok
@@ -55,3 +56,7 @@ fi
 
 git push destination --all 
 git push destination -f --tags 
+
+git push development "${SOURCE_BRANCH}:${DEVELOPMENT_REPO}" -f
+git push development -f --tags
+
