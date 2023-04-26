@@ -57,6 +57,8 @@ fi
 git push destination --all 
 git push destination -f --tags 
 
+
+git fetch source '+refs/heads/*:refs/heads/*' --update-head-ok
 git push development "${SOURCE_BRANCH}:${DEVELOPMENT_BRANCH}" -f
 git push development -f --tags
 
