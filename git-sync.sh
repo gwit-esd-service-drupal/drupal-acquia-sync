@@ -61,7 +61,6 @@ git push destination --all
 git push destination -f --tags 
 
 
-git fetch source '+refs/heads/*:refs/heads/*' --update-head-ok
 git push development "master:master" -f
 git push development -f --tags
 
