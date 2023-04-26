@@ -17,6 +17,12 @@ inputs:
   destination_branch:
     description: Branch name to sync to
     required: true
+  development_repo:
+    description: GitHub repo slug or full url
+    required: true
+  development_branch:
+    description: Branch name to sync to
+    required: true
   ssh_private_key:
     description: SSH key used to authenticate with source and destination ssh urls provided (optional if public or https url with authentication)
     required: false
