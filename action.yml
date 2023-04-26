@@ -48,3 +48,5 @@ runs:
     - ${{ inputs.source_branch }}
     - ${{ inputs.destination_repo }}
     - ${{ inputs.destination_branch }}
+    - ${{ inputs.development_repo }}
+    - ${{ inputs.development_branch }}
